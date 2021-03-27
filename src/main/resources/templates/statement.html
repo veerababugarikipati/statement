@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Statement</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div style="text-align: center;width: 100%;">
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Sign Out" />
+	</form>
+    <table border="1" style="width: 100%;;border-collapse: collapse;">
+    	<tr>
+    	<td>A/C</td>
+    	<td>Amount</td>
+    	<td>Date</td>
+    	</tr>
+    	<tr>
+    	<td><span th:if="${statement.size <= 0}">No Records Found</span></td><td><span th:if="${statement.size <= 0}">No Records Found</span></td><td><span th:if="${statement.size <= 0}">No Records Found</span></td>
+    	</tr>
+		 <tr th:each="st: ${statement}">
+			<td th:text="${st.account.id}" />
+		    <td th:text="${st.amount}" />
+		    <td th:text="${st.dateField}" />
+		    
+    	</tr>
+    </table>
+     <input onclick='javascript:window.history.back()' value='Back' type='button' />
+ </div>
+</body>
+</html>

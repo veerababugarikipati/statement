@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+  <div style="text-align: center;border: 1px solid black;padding-top: 20px;">
+
+	  <form th:action="@{/logout}" method="post">
+	            <input type="submit" value="Sign Out"/>
+	   </form>      
+	  <p><a th:href="@{/admin}">Admin</a></p>
+	  <p><a th:href="@{/user}">User</a></p>
+  </div>
+</body>
+</html>

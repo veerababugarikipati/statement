@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>User</title>
+</head>
+<body>
+<div style="text-align: center;width: 100%;">
+  <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"/>
+   </form> 
+  <form th:action="@{/statement/}" method="get">
+	<fieldset>
+		    <p>Select Account Id
+			<select name="accountId">
+				<option th:each="accountId : ${accountsIds}" th:value="${accountId}"
+					th:text="${accountId}" th:selected="${accountId}"></option>
+			</select>
+			</p>
+		<div class="form-actions">
+			<button type="submit" class="btn">Search</button>
+			<input onclick='javascript:window.history.back()' value='Back' type='button' />
+		</div>
+	</fieldset>
+	</form>
+ </div>	
+</body>
+
+</html>
