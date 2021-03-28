@@ -3,6 +3,7 @@
  */
 package com.nagarro.statement.exception;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,14 +24,14 @@ public class GenericExceptionHandler extends RuntimeException  {
 
 
 	
-	@ExceptionHandler(NumberFormatException.class)
+	@ExceptionHandler(Exception.class)
 	public ModelAndView handleException(Exception ex)
 	{
 		logger.error("Exception raised",ex);
 	    
 	    ModelAndView modelAndView = new ModelAndView();
 	    modelAndView.setViewName("error");
-	    modelAndView.addObject("message", ex.getCause());
+	    modelAndView.addObject("message", ExceptionUtils.getRootCause(ex));
 	    return modelAndView;
 	}
    
