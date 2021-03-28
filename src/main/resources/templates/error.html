@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Error Page</title>
+</head>
+<body>
+<div style="text-align: center;width: 100%;">
+  <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"/>
+   </form> 
+   <p th:text="${message}">message</p>
+    <input onclick='javascript:window.history.back()' value='Back' type='button' />
+</div>
+</body>
+</html>

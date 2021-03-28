@@ -50,8 +50,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		    .logout()
 		    .and()
 		    .sessionManagement()         
-		    .maximumSessions(1);
-		   // .maxSessionsPreventsLogin(true);
+		    .maximumSessions(1)
+		    .maxSessionsPreventsLogin(true);
 
 	}
 
