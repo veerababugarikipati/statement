@@ -28,11 +28,11 @@ back statement.
 ![image](https://user-images.githubusercontent.com/5140477/112759068-62fcc880-9002-11eb-906b-e5bdeccfac1b.png)
 # Login Page
  - URL: http://localhost:8080/nagarro/login
- - ![image](https://user-images.githubusercontent.com/5140477/112759097-845db480-9002-11eb-9e9e-7de3ae65008a.png)
+  ![image](https://user-images.githubusercontent.com/5140477/112759097-845db480-9002-11eb-9e9e-7de3ae65008a.png)
 
 # User Home
  - URL: http://localhost:8080/nagarro/user
- - ![image](https://user-images.githubusercontent.com/5140477/112759164-d8689900-9002-11eb-8e29-db4c9964fcd1.png)
+  ![image](https://user-images.githubusercontent.com/5140477/112759164-d8689900-9002-11eb-8e29-db4c9964fcd1.png)
 # User Search
   - URL: http://localhost:8080/nagarro/statement/?accountId=5
   ![image](https://user-images.githubusercontent.com/5140477/113001569-f9a3c380-9181-11eb-82c8-16a540399b53.png)
