@@ -35,16 +35,16 @@ back statement.
  - ![image](https://user-images.githubusercontent.com/5140477/112759164-d8689900-9002-11eb-8e29-db4c9964fcd1.png)
 # User Search
   - URL: http://localhost:8080/nagarro/statement/?accountId=5
-  - ![image](https://user-images.githubusercontent.com/5140477/112759226-21205200-9003-11eb-8b1c-61fc4cc1554b.png)![image](https://user-images.githubusercontent.com/5140477/113001569-f9a3c380-9181-11eb-82c8-16a540399b53.png)
+  ![image](https://user-images.githubusercontent.com/5140477/113001569-f9a3c380-9181-11eb-82c8-16a540399b53.png)
 
 # Admin Home
   - URL: http://localhost:8080/nagarro/admin
-  - ![image](https://user-images.githubusercontent.com/5140477/112759264-46ad5b80-9003-11eb-9dc9-ba0cbcabf6fa.png)![image](https://user-images.githubusercontent.com/5140477/113001692-1cce7300-9182-11eb-9124-45dc0b15f8df.png)
+  ![image](https://user-images.githubusercontent.com/5140477/113001692-1cce7300-9182-11eb-9124-45dc0b15f8df.png)
 
 
 # Admin Search:
   -URL: http://localhost:8080/nagarro/statement/?accountId=3&fromDate=2020-01-01&toDate=2021-03-28&fromAmount=100&toAmount=1000
-  -  ![image](https://user-images.githubusercontent.com/5140477/112759314-78bebd80-9003-11eb-86be-1a00afd3e04d.png)![image](https://user-images.githubusercontent.com/5140477/113001797-34a5f700-9182-11eb-94b7-94228dbb60e7.png)
+  ![image](https://user-images.githubusercontent.com/5140477/113001797-34a5f700-9182-11eb-94b7-94228dbb60e7.png)
 
 
 
