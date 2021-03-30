@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.nagarro.statement.entity.Statement;
 import com.nagarro.statement.repository.StatementRepository;
 import com.nagarro.statement.service.StatementService;
@@ -19,13 +20,23 @@ public class StatementServiceImpl implements StatementService {
 	Logger logger = LoggerFactory.getLogger(StatementServiceImpl.class);
     @Autowired
     private StatementRepository statementRepository;
+    /*@Autowired
+    private ModelMapper modelMapper;
+*/
 
     @Override
     public List<Statement> getStatement(Long accountId, LocalDate fromDate, LocalDate toDate, Double fromAmount, Double toAmount) {
-        return statementRepository.findByAccountId(accountId).stream()
+       
+    /*	List<StatementDTO> statementList=statementRepository.findByAccountId(accountId).stream()
+    			.map(statement -> modelMapper.map(statement, StatementDTO.class))
                 .filter(statement -> isValidMonthRange(statement.getDateField(), fromDate, toDate) && isValidAmountRange(statement.getAmount(),fromAmount,toAmount))
                 
                 .collect(Collectors.toList());
+                return statementList;*/
+    	   
+    	return statementRepository.findByAccountId(accountId).stream()
+             .filter(statement -> isValidMonthRange(statement.getDateField(), fromDate, toDate) && isValidAmountRange(statement.getAmount(),fromAmount,toAmount))
+              .collect(Collectors.toList());
     }
 
     public boolean isValidMonthRange(String date, LocalDate from, LocalDate to) {

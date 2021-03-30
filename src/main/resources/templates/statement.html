@@ -19,7 +19,8 @@
     	<td><span th:if="${statement.size <= 0}">No Records Found</span></td><td><span th:if="${statement.size <= 0}">No Records Found</span></td><td><span th:if="${statement.size <= 0}">No Records Found</span></td>
     	</tr>
 		 <tr th:each="st: ${statement}">
-			<td th:text="${st.account.id}" />
+		     
+			<td th:text="${st.account.accountNumber}" />
 		    <td th:text="${st.amount}" />
 		    <td th:text="${st.dateField}" />
 		    

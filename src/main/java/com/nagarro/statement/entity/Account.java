@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.nagarro.statement.custom.annotations.Mask;
+import com.nagarro.statement.util.MaskingUtil;
+
 
 @Entity(name = "account")
 public class Account {
@@ -20,6 +23,7 @@ public class Account {
     @Column(name="account_type")
     private String accountType;
     @Column(name="account_number")
+    @Mask("****")
     private String accountNumber;
     @OneToMany(mappedBy="account", cascade = CascadeType.ALL)
     private Set<Statement> statement = new HashSet<>();
@@ -43,7 +47,7 @@ public class Account {
 		this.accountType = accountType;
 	}
 	public String getAccountNumber() {
-		return accountNumber;
+		return accountNumber=MaskingUtil.maskStringField(Account.class, "accountNumber", accountNumber);
 	}
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
